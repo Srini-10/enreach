@@ -2,10 +2,10 @@ import React, { useEffect, useRef } from "react";
 import SampleImage from "../../assets/SampleImage.png";
 
 const Product = () => {
-  const ballsContainer = useRef(null);
+  const ballsContainer = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       if (ballsContainer.current) {
         const { clientX, clientY } = e;
         const windowWidth = window.innerWidth;
@@ -68,7 +68,7 @@ const Product = () => {
           {/* Floating Balls at Bottom Right */}
           <div
             ref={ballsContainer}
-            className="absolute scale-[0.3] md:scale-[0.7] lg:scale-1 bottom-8 md:bottom-10 right-8 md:right-10"
+            className="absolute scale-[0.3] md:scale-[0.7] lg:scale-1 bottom-8 md:bottom-10 right-8 md:right-10 transition-transform duration-500 ease-out"
           >
             <div className="ball ball-1 bg-amber-500 shadow-lg"></div>
             <div className="ball ball-2 bg-amber-600 shadow-lg"></div>
