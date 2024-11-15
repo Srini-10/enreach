@@ -5,7 +5,7 @@ const Newsletter = () => {
   return (
     <>
       <div className="w-full h-[100px] md:h-[180px] lg:h-[210px] mt-14 md:mt-6 lg:mt-14 xl:mt-16 flex justify-center items-center">
-        <div className="w-[80vw] md:w-[88vw] xl:w-[1024px] h-full md:flex justify-between gap-16 items-center">
+        <div className="w-[80vw] md:w-[88vw] xl:w-[1100px] h-full md:flex justify-between gap-16 items-center">
           <div className="w-[280px] md:min-w-[300px] lg:min-w-[340px] xl:min-w-[400px]">
             <h1 className="chakra-bold text-[16px] md:text-[20px] lg:text-[22px] xl:text-[23px] uppercase">
               Join our newsletter

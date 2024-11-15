@@ -10,7 +10,7 @@ import GithubIcon from "../assets/icons/GithubIcon.tsx";
 const Footer = () => {
   return (
     <footer className="w-full text-neutral-400 mt-10 md:mt-0">
-      <div className="max-w-[86vw] md:max-w-[88vw] xl:max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-y-8 lg:gap-y-0 lg:flex justify-between border-y-[1px] border-neutral-700 py-8 md:py-12 lg:py-16 xl:py-20">
+      <div className="max-w-[86vw] md:max-w-[88vw] xl:max-w-[1100px] mx-auto grid grid-cols-2 md:grid-cols-3 gap-y-8 lg:gap-y-0 lg:flex justify-between border-y-[1px] border-neutral-700 py-8 md:py-12 lg:py-16 xl:py-20">
         {/* Product Section */}
         <div>
           <h4 className="chakra-bold text-neutral-600 font-semibold lg:mb-1.5 xl:mb-2 uppercase text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px]">
@@ -211,7 +211,7 @@ const Footer = () => {
 
       {/* Copyright and Social Links */}
       <div className="w-full py-14">
-        <div className="max-w-[86vw] md:max-w-[88vw] xl:max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-start">
+        <div className="max-w-[86vw] md:max-w-[88vw] xl:max-w-[1100px] mx-auto flex flex-col md:flex-row justify-between items-start">
           {/* Logo and Caption */}
           <div className="w-full md:w-auto text-center md:text-left mb-4 md:mb-0">
             <div className="md:block flex flex-col items-center justify-center text-center md:text-left w-full md:w-[410px]">
@@ -228,7 +228,7 @@ const Footer = () => {
           </div>
 
           {/* Social Links */}
-          <div className="mx-auto flex space-x-4">
+          <div className="mx-auto md:mx-0 flex space-x-4">
             <Link to="#" target="_blank">
               <YoutubeIcon />
             </Link>
