@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import confetti from "canvas-confetti";
 import { Squeeze } from "hamburger-react";
 import Logo from "../assets/Enreach_Light.svg";
 import LogoMobile from "../assets/Enreach_Light_Empty.svg";
@@ -22,9 +23,49 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const triggerConfetti = () => {
+    const duration = 1.5 * 1000;
+    const animationEnd = Date.now() + duration;
+    const defaults = {
+      startVelocity: 30,
+      spread: 360,
+      ticks: 60,
+      zIndex: 99999,
+    };
+
+    const interval = setInterval(() => {
+      const timeLeft = animationEnd - Date.now();
+
+      if (timeLeft <= 0) {
+        return clearInterval(interval);
+      }
+
+      // Generate confetti from bottom left
+      confetti({
+        ...defaults,
+        particleCount: 30,
+        spread: 80,
+        origin: { x: 0, y: 1 },
+        angle: 60,
+      });
+
+      // Generate confetti from bottom right
+      confetti({
+        ...defaults,
+        particleCount: 30,
+        spread: 80,
+        origin: { x: 1, y: 1 },
+        angle: 120,
+      });
+    }, 250);
+  };
+
   return (
     <div className="max-w-full w-full min-h-[64px] max-h-[64px] border-b-[0.5px] border-neutral-700 bg-black bg-opacity-80 backdrop-blur-sm sticky flex justify-between px-5 md:px-10 items-center top-0 z-50">
-      <div className="w-36 z-50 flex justify-between items-center max-h-[60px]">
+      <div
+        className="w-36 z-50 flex justify-between items-center max-h-[60px] cursor-pointer"
+        onClick={triggerConfetti}
+      >
         {/* Conditionally render Logo based on screen size */}
         <img src={isMobile ? LogoMobile : Logo} alt="Logo" />
       </div>

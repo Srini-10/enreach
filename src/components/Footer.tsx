@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import confetti from "canvas-confetti";
 import Logo from "../assets/Light.svg";
 import YoutubeIcon from "../assets/icons/YoutubeIcon.tsx";
 import TwitterIcon from "../assets/icons/TwitterIcon.tsx";
@@ -8,6 +9,42 @@ import DiscardIcon from "../assets/icons/DiscordIcon.tsx";
 import GithubIcon from "../assets/icons/GithubIcon.tsx";
 
 const Footer = () => {
+  const triggerConfetti = () => {
+    const duration = 1.5 * 1000;
+    const animationEnd = Date.now() + duration;
+    const defaults = {
+      startVelocity: 30,
+      spread: 360,
+      ticks: 60,
+      zIndex: 99999,
+    };
+
+    const interval = setInterval(() => {
+      const timeLeft = animationEnd - Date.now();
+
+      if (timeLeft <= 0) {
+        return clearInterval(interval);
+      }
+
+      // Generate confetti from bottom left
+      confetti({
+        ...defaults,
+        particleCount: 30,
+        spread: 80,
+        origin: { x: 0, y: 1 },
+        angle: 60,
+      });
+
+      // Generate confetti from bottom right
+      confetti({
+        ...defaults,
+        particleCount: 30,
+        spread: 80,
+        origin: { x: 1, y: 1 },
+        angle: 120,
+      });
+    }, 250);
+  };
   return (
     <footer className="w-full text-neutral-400 mt-10 md:mt-0">
       <div className="max-w-[86vw] md:max-w-[88vw] xl:max-w-[1100px] mx-auto grid grid-cols-2 md:grid-cols-3 gap-y-8 lg:gap-y-0 lg:flex justify-between border-y-[1px] border-neutral-700 py-8 md:py-12 lg:py-16 xl:py-20">
@@ -215,7 +252,12 @@ const Footer = () => {
           {/* Logo and Caption */}
           <div className="w-full md:w-auto text-center md:text-left mb-4 md:mb-0">
             <div className="md:block flex flex-col items-center justify-center text-center md:text-left w-full md:w-[410px]">
-              <img className="w-12" src={Logo} alt="" />
+              <img
+                onClick={triggerConfetti}
+                className="w-12 cursor-pointer"
+                src={Logo}
+                alt=""
+              />
               <p className="text-neutral-400 text-[11px] lg:text-[13px] xl:text-[15.5px] font-semibold mt-3">
                 &copy; {new Date().getFullYear()} Enreach, Inc. All rights
                 reserved.
