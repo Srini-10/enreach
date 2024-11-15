@@ -11,7 +11,7 @@ const Smart = () => {
         <img
           src={Gradient}
           alt=""
-          className="absolute top-0 transform -translate-x-1/3 md:w-[550px] lg:max-w-[600px] xl:w-[1000px] -z-50 opacity-25"
+          className="absolute top-0 transform -translate-x-1/3 md:w-[500px] lg:max-w-[600px] xl:w-[1000px] -z-50 opacity-25"
         />
         <div className="relative md:mt-0 lg:-mt-24 xl:-mt-52 z-10 md:flex justify-between items-center bg-black bg-opacity-30 backdrop-blur-lg border-[1px] border-neutral-700 opacity-80 md:w-[90vw] xl:w-[1200px] mx-auto xl:min-h-[700px] md:h-[400px] lg:h-[500px] max-h-[calc(100vh-110px)] rounded-2xl overflow-hidden">
           <div className="w-[88vw] md:w-[65%] max-h-[400px] md:h-full overflow-hidden">

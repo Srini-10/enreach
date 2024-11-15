@@ -26,7 +26,7 @@ const Product = () => {
 
   return (
     <>
-      <div className="relative z-10 lg:flex justify-between items-center gap-5 bg-black bg-opacity-30 backdrop-blur-lg opacity-80 mx-auto w-full px-[10vw] md:px-0 md:w-[90vw] lg:w-[900px] xl:w-[1200px] lg:max-h-[500px] xl:max-h-[700px] lg:h-[calc(100vh-110px)] border-t-[1px] border-neutral-700 md:border-none mt-0 pt-12 md:pt-0 md:mt-20 overflow-hidden md:rounded-2xl">
+      <div className="relative z-10 lg:flex justify-between items-center gap-5 bg-black bg-opacity-30 backdrop-blur-lg opacity-80 mx-auto w-full px-[10vw] md:px-0 md:w-[90vw] lg:w-[900px] xl:w-[1200px] lg:max-h-[500px] xl:max-h-[700px] lg:h-[calc(100vh-110px)] border-t-[1px] border-neutral-700 md:border-none mt-0 pt-12 md:pt-0 md:mt-10 lg:mt-0 xl:-mt-32 overflow-hidden md:rounded-2xl">
         {/* Left Container with Background Image */}
         <div className="relative w-full h-[300px] md:h-[400px] lg:min-h-full flex flex-col justify-end p-6 md:p-10 overflow-hidden rounded-2xl border-[1px] border-neutral-700">
           <img
