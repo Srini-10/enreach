@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" filter="url(#blur-filter)">
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="btn-left" x1="100%" x2="100%" y1="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97706" /> <!-- amber-700 -->
+      <stop offset="100%" stop-color="#FBBF24" /> <!-- amber-500 -->
+    </linearGradient>
+
+    <!-- Blur Filter Definition -->
+    <filter id="blur-filter" x="0" y="0" width="100%" height="100%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="100" /> <!-- Increase stdDeviation for more blur -->
+    </filter>
+  </defs>
+
+  <!-- Circle using the gradient, with padding by reducing size and adjusting position -->
+  <circle cx="55" cy="60" r="40" fill="url(#btn-left)" /> <!-- Centered within the padded space -->
+
+  <!-- Orange ovals with padding adjustments -->
+  <ellipse cx="85" cy="40" rx="20" ry="20" fill="#f2a100" /> <!-- orange-500 -->
+  <ellipse cx="38" cy="45" rx="20" ry="20" fill="#ffa200" />
+  <ellipse cx="35" cy="80" rx="20" ry="20" fill="#e78b02" />
+</svg>

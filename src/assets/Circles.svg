@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Outer circle with full opacity and thinner stroke -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="white" stroke-width="0.2" opacity="0.15" />
+
+  <!-- Slightly faded circles, moving inward with reduced stroke width -->
+  <circle cx="100" cy="100" r="70" fill="none" stroke="white" stroke-width="0.2" opacity="0.2" />
+  <circle cx="100" cy="100" r="50" fill="none" stroke="white" stroke-width="0.2" opacity="0.25" />
+  <circle cx="100" cy="100" r="30" fill="none" stroke="white" stroke-width="0.2" opacity="0.3" />
+  <circle cx="100" cy="100" r="13" fill="none" stroke="white" stroke-width="0.2" opacity="0.35" />
+</svg>
