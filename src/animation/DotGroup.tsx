@@ -7,7 +7,7 @@ const DotGroup = ({ count }) => {
       {dots.map((_, index) => (
         <span
           key={index}
-          className={`dot w-1.5 h-1.5 bg-amber-500 rounded-full animate-dot`}
+          className={`dot w-1 h-1 bg-amber-500 rounded-full animate-dot`}
           style={{ animationDelay: `${index * 0.2}s` }}
         ></span>
       ))}

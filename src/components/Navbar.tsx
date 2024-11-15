@@ -141,7 +141,7 @@ const Navbar = () => {
           </div>
 
           {/* Quote positioned at the bottom */}
-          <div className="w-full absolute bottom-12 text-center text-neutral-700 text-sm pb-10">
+          <div className="w-full absolute bottom-12 text-center text-neutral-300 text-sm pb-10">
             "The future belongs to Tech."
           </div>
         </div>
